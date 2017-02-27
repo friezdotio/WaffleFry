@@ -1,6 +1,6 @@
 <?php
 
-class User
+class UserModel
 {
     /**
      * @param object $db A PDO database connection
