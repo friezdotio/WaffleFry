@@ -7,7 +7,7 @@ class User extends Controller
     public function get($id='')
     {   
         // Call any model
-        $users = $this->model->getUsers();
+        $users = $this->user->getUsers();
         
         // Include a response code
         http_response_code(200);
