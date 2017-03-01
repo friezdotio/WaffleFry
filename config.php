@@ -44,22 +44,6 @@ if (defined('URL_SUB_FOLDER')) {
 }
 
 /**
- * Configuration for: Resources
- * Resources is where your API code goes. It also includes and optional model folder.
- * You can also enable MODEL_REMOTE which allows you to use another framework's models
- *
- * MODEL_REMOTE
- * This boolean value determines if you use the framework's resource/model folder or a remote model folder.
- * 
- * RES_REMOTE_PATH
- * If the RES_REMOTE is 'true' you must point the resources/model to a service folder in another framework.
- *
- */
-
-define('MODEL_REMOTE', false);
-define('MODEL_REMOTE_PATH', '/path/to/folder/'); // Make sure to include the trailing back slash.
-
-/**
 * Configuration for: CORS
 * If you are using this as a remote API, you will need to enable CORS.
 * Enable CORs here so you don't have to on your server.

@@ -48,9 +48,6 @@ class Controller
         $this->base = new Base($this->db);
         
         $modelPath = 'resources/model/';
-        if(MODEL_REMOTE == true){
-            $modelPath = MODEL_REMOTE_PATH;
-        }
         
         $files = scandir($modelPath); 
         foreach($files as $file){
