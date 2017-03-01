@@ -1,3 +1,5 @@
+*** WaffleFry IS NOT PRODUCTION READY. WAIT FOR version 1.0 ***
+
 # WaffleFry Framework
 
 WaffleFry is a very small REST API built for PHP. Easy to use stand-alone or with an existing MVC framework.
