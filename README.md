@@ -1,4 +1,4 @@
-*** WaffleFry IS NOT PRODUCTION READY. WAIT FOR version 1.0 ***
+### *** WaffleFry IS NOT PRODUCTION READY. WAIT FOR version 1.0 ***
 
 # WaffleFry Framework
 
