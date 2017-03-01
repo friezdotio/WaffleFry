@@ -4,25 +4,14 @@
 class User extends Controller
 {
 
-    public function get($id='')
+    public function get()
     {   
         // Call any model
-        $users = $this->usermodel->getUsers();
+        $users = $this->usermodel->getUsers($id);
         
         // Include a response code
         http_response_code(200);
         
-        print json_encode($id);
+        print json_encode($users);
     }
-
-    public function insert($name,$email)
-    {
-       http_response_code(200);
-    }
-    
-     public function delete($id)
-    {
-       http_response_code(200);
-    }
-    
 }

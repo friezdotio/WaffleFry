@@ -52,19 +52,13 @@
     </table>
     <div>
         <h3>Output</h3>
-        <pre id="output">
-        </pre>
+        <pre id="output"></pre>
     </div>
 </div>
 <script>
     <?php foreach ($classArray as $class=>$methodArray) {
         foreach ($methodArray as $method=>$paramArray) {
             if($_POST['method'] == $method){
-                //echo "$('#submit_" . $method . "').click( function(event) {";
-               // echo 'event.preventDefault();';
-                foreach($paramArray as $param=>$isOptional){
-                    echo 'var test = $("#' . $param . '_' . $method . '").val();';
-                }
                 echo '$.post( "' . $url . $method;
                 foreach($paramArray as $param=>$isOptional){
                     if($param == '1' || $param == '0'){ 
@@ -76,7 +70,6 @@
                     }
                 }
                 echo '", function( data ) { $( "#output" ).html( data );});';
-                // echo '});';
             }
         } 
      } ?>
