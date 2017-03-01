@@ -11,10 +11,10 @@ WaffleFry uses the Apache License (see LICENSE file), however, we forked this pr
 
 For information about panique/tiny please visit:
 
-@package php-mvc
-@author Panique
-@link http://www.php-mvc.net
-@link https://github.com/panique/php-mvc/
-@license http://opensource.org/licenses/MIT MIT License
+* @package php-mvc
+* @author Panique
+* @link http://www.php-mvc.net
+* @link https://github.com/panique/php-mvc/
+* @license http://opensource.org/licenses/MIT MIT License
 
 ## More Documentation Coming Soon
