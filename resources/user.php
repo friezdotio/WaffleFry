@@ -17,12 +17,14 @@ class User extends Controller
     
     public function update($id=null)
     {   
-        $id = $_POST["id"];
+        if(isset($_POST["id"])){
+            $id = $_POST["id"];
+        }
         
         // Include a response code
         http_response_code(200);
         
-        print json_encode($_POST["id"]);
+        print json_encode($id);
     }
     
 }
