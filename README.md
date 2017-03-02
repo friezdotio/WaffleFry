@@ -40,9 +40,9 @@ Be sure to leave a response in your REST methods. `http_response_code(200);` and
     }
 ```
 
-To call your dashboard (if enabled): `index.php/user`
-To call your API method: `index.php/user/get`
-To call your API with a variable: `index.php/user/get/variable`
+- To call your dashboard (if enabled): `index.php/user`
+- To call your API method: `index.php/user/get`
+- To call your API with a variable: `index.php/user/get/variable`
 
 ### Data Input
 
