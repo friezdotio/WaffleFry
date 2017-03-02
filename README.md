@@ -25,7 +25,7 @@ Any classes in this files is automatically injected into the framework. This is 
 
 WaffleFry is very easy to use. You simply just add the resources you need for your REST API into the root directory of /resources. You then add your get/delete/insert/update methods to that class. You can also add other logic to these classes but just remember, to be RESTful you must only call get, delete, insert, or update publicly. There is also a model directory in your resources directory. You can add any additonal logic here if you want to keep your REST classes clean.
 
-Be sure to leave a response in your REST methods. `http_response_code(200);` and also be sure that you JSON encode your returns using `json_encode()` or if you want to encode the entire query you can use out built in method `$this->query2json($query)`. This will be more automated in the future.
+Be sure to leave a response in your REST methods. `http_response_code(200);` and also be sure that you JSON encode your returns using `json_encode()` or if you want to encode the entire query you can use our built in method `$this->query2json($query)`. This will be more automated in the future.
 
 ```php
   public function get()
@@ -44,9 +44,25 @@ To call your dashboard (if enabled): `index.php/user`
 To call your API method: `index.php/user/get`
 To call your API with a variable: `index.php/user/get/variable`
 
-### Note
+### Data Input
 
-When using AJAX or other means to call your REST API you must call your methods using the URL and not using the DATA parameter. If you do need to use the data paramer just simply do `$_POST['variable']` and do not define any arguments to that method. Choosing to use the `data` argument instead of passing the parameters via the URL will cause dashboard to not work at this time. We are coming up with a solution for this. 
+There are multiple ways you can input your data. You can include the variable in the URL (like above) or within a data structure. Just note, if you are using any other method than the URL varibles with PHP you must use `$_POST["variable"]` or else it will not work. If you also plan to use the dashboard you must also include a parameter. Below is an example of how you can pass a parameter using the URL and/or using other methods. (For example, the data argument in jquery.ajax.
+
+```php
+  public function update($id=null)
+    {   
+        if(isset($_POST["id"])){
+            $id = $_POST["id"];
+        }
+        
+        // Include a response code
+        http_response_code(200);
+        
+        print json_encode($id);
+    }
+```
+
+As you can see, the default of the parameter is null. This way if you use the data structure instead to pass the parameters it will not throw an error. Also, make sure the `$_POST` variable is using an `isset()` condition so that you are still able pass in the ID as a URL parameter as well.
 
 # TINY Framework
 
