@@ -25,6 +25,7 @@
                         </td>
                         <td>
                             <p>
+                                <input type="hidden" name="method" value="<?php echo $method; ?>">
                                 <?php foreach($paramArray as $param=>$isOptional){
                                     if($param == '1' || $param == '0'){ 
                                         echo ''; 
@@ -37,7 +38,6 @@
                                             $optional = '';
                                         }
                                         echo '<input style="height:25px;" type="text" name="' . $param . '_' . $method . '" placeholder="' . $param . '">' . $optional . '<br>';
-                                         echo '<input type="hidden" name="method" value="' . $method . '">';
                                     }
                                 } ?>
                             </p>
@@ -59,7 +59,7 @@
     <?php foreach ($classArray as $class=>$methodArray) {
         foreach ($methodArray as $method=>$paramArray) {
             if($_POST['method'] == $method){
-                echo '$.post( "' . $url . $method;
+                echo '$.post( "' . $url . '/' . $method;
                 foreach($paramArray as $param=>$isOptional){
                     if($param == '1' || $param == '0'){ 
                     }
