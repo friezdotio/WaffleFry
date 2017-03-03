@@ -31,7 +31,7 @@ ini_set("display_errors", 1);
 
 define('URL_PROTOCOL', 'http://');
 define('URL_DOMAIN', $_SERVER['HTTP_HOST']);
-//define('URL_SUB_FOLDER', 'lil-p');
+//define('URL_SUB_FOLDER', 'wafflefry');
 define('URL_INDEX_FILE', 'index.php' . '/');
 
 // the final URLs, constructed with the elements above
