@@ -20,8 +20,10 @@ class Base
     public function getClass($url)
     {
         $removeIndex = str_replace("index.php","",$url);
+        if(null !== URL_SUB_FOLDER){
+            $removeIndex = str_replace(URL_SUB_FOLDER,"",$removeIndex);
+        }
         $controller = str_replace("/","",$removeIndex);
-
         $filepath = 'resources/' . $controller . '.php';
 
         $php_code = file_get_contents($filepath);
@@ -59,6 +61,5 @@ class Base
         }
         return $array;
     }
-
 
 }
