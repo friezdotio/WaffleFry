@@ -4,7 +4,7 @@ class Application
 {
     /** informational variables */
     private $frameworkName = "WaffleFry";
-    private $version = "0.1.0";
+    private $version = "0.1.1";
     
     /** @var null The controller */
     private $url_controller = null;
