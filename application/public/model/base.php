@@ -45,7 +45,7 @@ class Base
             $methods = get_class_methods($class);
             foreach($methods as $method){
                 // no other methods really matter
-                if($method == 'get' || $method == 'insert' || $method == 'update' || $method == 'delete') {
+                if($method == 'get' || $method == 'post' || $method == 'put' || $method == 'delete') {
                     $ref = new ReflectionMethod($class, $method);
                     if(count($ref->getParameters()) == 0){
                         $array[$class][$method][] = 'No Parameters';
